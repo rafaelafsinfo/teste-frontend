@@ -1,3 +1,14 @@
 {
+  "root": true,
+
+  "env": {
+    "node": true
+  },
+
+  "parser": "babel-eslint",
+
+  "plugins": 
+    ["react"]
+,
   "extends": "next/core-web-vitals"
 }
