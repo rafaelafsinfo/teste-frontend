@@ -33,25 +33,25 @@ export default function home() {
     return(
         <div>
             <Navbar/>
-            <h1>Adicionar funcionario</h1>
-            <form onSubmit={handleSubmit}>
-                <label>
+            <h1 class="formulario_titulo ">Adicionar funcionario</h1>
+            <form class="formulario" onSubmit={handleSubmit}>
+                <label class="formulario_label">
                     Nome:
-                    <input type="text" value={nome} onChange={(event) => setNome(event.target.value)} />
+                    <input class="formulario_input" type="text" value={nome} onChange={(event) => setNome(event.target.value)} />
                 </label>
                 <br />
-                <label>
+                <label class="formulario_label">
                     Cargo:
-                    <input type="text" value={cargo} onChange={(event) => setCargo(event.target.value)} />
+                    <input class="formulario_input" type="text" value={cargo} onChange={(event) => setCargo(event.target.value)} />
                 </label>
                 <br />
-                <label>
+                <label class="formulario_label">
                     Salário:
-                    <input type="number" value={salario} onChange={(event) => setSalario(event.target.value)} />
+                    <input class="formulario_input" type="number" value={salario} onChange={(event) => setSalario(event.target.value)} />
                 </label>
                 <br />
-                <Link href="/">
-                    <button type="submit">Enviar</button>
+                <Link href="/" >
+                    <button class="formulario_botao" type="submit">Enviar</button>
                 </Link>
             </form>
             {erro && <div>{erro}</div>}

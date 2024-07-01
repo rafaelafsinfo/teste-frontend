@@ -1,9 +1,11 @@
+
 table {
     border-collapse: collapse;
     width: 100%;
   }
   
   th, td {
+    width: auto;
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
@@ -14,5 +16,62 @@ table {
   }
   
   tr:nth-child(even) {
+    width:auto;
     background-color: #f9f9f9;
+  }
+
+  .select-container {
+    margin-bottom: 20px;
+  }
+  
+  .select-container select {
+    width: 100%;
+    padding: 10px 20px; /* adicionado padding lateral */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    appearance: none; /* remove o estilo padrão do select */
+    background-image: none; /* remove o estilo padrão do select */
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .select-container select:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-container {
+    margin-bottom: 20px;
+  }
+  
+  .input-container input {
+    width: 100%;
+    padding: 10px 20px; /* adicionado padding lateral */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .input-container input:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* adicionado estilo para a seta do select */
+  .select-container select::-ms-expand {
+    display: none; /* remove a seta do select em browsers Edge e IE */
+  }
+  
+  .select-container select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23333' stroke-width='2' d='M5 10l5-5 5 5z'/%3E%3C/svg%3E"); /* adicionado uma seta personalizada */
+    background-size: 12px; /* tamanho da seta */
+    background-position: 95% 50%; /* posição da seta */
+    background-repeat: no-repeat; /* não repetir a seta */
+  }
+
+  .filter {
+    display: flex;
   }
